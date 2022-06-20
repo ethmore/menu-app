@@ -1,0 +1,144 @@
+
+html {
+    margin: 0;
+}
+body {
+    background-color: rgb(240, 240, 240);
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    margin-top: 0;
+}
+
+#homeSvg {
+    position: absolute;
+    z-index: 2;
+    top: 25px;
+    left: 25px;
+
+    height: 50px;
+    width: 50px;
+    filter: invert(1);
+}
+
+#categoryNameHeader {
+    position: fixed;
+    width: 100vw;
+    text-align: center;
+    color: white;
+    margin: 0;
+    font-size: 3rem;
+    padding: 1.5rem 0;
+    background-color: #222831;
+
+}
+
+#background {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    z-index: -1;
+}
+#background::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.83;
+    z-index: -1;
+}
+
+
+
+
+#products {
+    display: flex;
+    padding-top: 8rem;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product-item {
+    width: 30%;
+    text-align: center;
+
+    border: 1px solid rgb(190, 190, 190);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    list-style: none;
+}
+
+.product-item img {
+    width: 100%;
+    height: 250px;
+    /* height: 45%; */
+    object-fit: cover;
+}
+
+.productInfo {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-item .productName {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+.product-item p {
+    margin: 0;
+    padding: 0;
+}
+
+.product-item .content {
+    font-size: 0.95rem;
+    padding: 1rem;
+    text-align: start;
+
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 30%;
+}
+
+.product-item .price {
+    font-weight: 600;
+    padding: 1rem;
+
+}
+
+.product-item .price {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.product-item .price::-webkit-scrollbar {     
+    display: none;  /* Safari and Chrome */
+}
+
+
+@media only screen and (max-width: 500px) {
+    .productInfo {
+        height:auto;
+    }
+    .product-item {
+        width: 80%;
+    }
+    #homeSvg {
+        position:fixed;
+        top: 40px;
+        left: 20px;
+    
+        height: 30px;
+        width: 30px;
+    }
+}

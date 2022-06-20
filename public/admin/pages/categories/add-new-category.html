@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+
+  <link rel="stylesheet" href="/admin/sidebar/sidebars.css">
+  <link rel="stylesheet" href="/admin/header/headers.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <link rel="stylesheet" href="/admin/pages/categories/add-new-category.css">
+  <script src="/admin/jquerry.min.js"></script>
+</head>
+
+<body>
+
+  <div class="page">
+    <div id="jsSidebar">
+    </div>
+
+    <div id="main">
+      <div id="navBar"></div>
+      <h2>Kategori Oluştur</h2>
+
+      <form id='form'>
+        <div>
+          <div class="input-group">
+            <label class="label-padding" for='files'>Kategori için görsel yükleyin:</label>
+            <input name="files" id='files' type="file" required>
+          </div>
+          <div class="input-group">
+            <label class="label-padding" for='name'>Kategori Adı:</label>
+            <input name='name' id='name' placeholder="Kategori adını giriniz" required />
+          </div>
+        </div>
+
+        <br>
+        <div id="info" style="color: red;"></div>
+
+        <button type='submit'>Kategori Oluştur</button>
+      </form>
+
+
+    </div>
+
+  </div>
+
+  <script src="/admin/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="/admin/sidebar/sidebars.js"></script>
+  <script src="/admin/pages/categories/add-new-category.js"></script>
+
+</body>
+
+</html>

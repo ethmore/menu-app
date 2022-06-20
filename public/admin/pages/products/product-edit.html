@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <link rel="stylesheet" href="/admin/sidebar/sidebars.css">
+    <link rel="stylesheet" href="/admin/header/headers.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+    <link rel="stylesheet" href="/admin/pages/products/product-edit.css">
+    <script src="/admin/jquerry.min.js"></script>
+</head>
+
+<body>
+
+    <div class="page">
+        <div id="jsSidebar">
+        </div>
+
+        <div id="main">
+            <div id="navBar"></div>
+
+            <h2>Ürün Düzenle</h2>
+            <form id='editProductForm'>
+                <img src="" alt="Ürün görsel" id="productPhoto">
+
+                <div class="inputGroup">
+                    <label for='productMedia'>Görsel Değiştir:</label>
+                    <input name="productMedia" id='productMedia' type="file">
+                </div>
+                <div class="inputGroup">
+                    <label for='productName'>Ürün Adı:</label>
+                    <input name='productName' id='productName' placeholder="Ürün adını giriniz" required />
+                </div>
+
+                <div class="inputGroup">
+                    <label for='price'>Fiyat:</label>
+                    <input type="number" name='price' id='price' placeholder="Fiyat bilgisi" required />
+                </div>
+
+                <div class="inputGroup">
+                    <label for='name'>Ürün Kategorisi:</label>
+                    <select name="productCategory" id="productCategory" required>
+                        <option disabled selected value> -- Kategori Seçiniz -- </option>
+                    </select>
+                </div>
+
+                <div class="inputGroup">
+                    <label for='productContent'>İçerik Bilgisi:</label>
+                    <textarea name="productContent" id="productContent" cols="30" rows="6"
+                        placeholder="Bu alana ürün içeriği hakkında bilgi girebilirsiniz"
+                        style="resize: none;"></textarea>
+                </div>
+
+                <br>
+                <div id="info" style="color: red;"></div>
+
+                <div class="inputGroup buttons">
+                    <button type='submit'>Ürün Bilgilerini Güncelle</button>
+                    <a id="deleteProduct">Ürün Sil</a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="/admin/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/admin/sidebar/sidebars.js"></script>
+    <script src="/admin/pages/products/product-edit.js"></script>
+
+</body>
+
+</html>

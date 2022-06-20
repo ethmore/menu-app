@@ -1,0 +1,58 @@
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#newProductForm {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border: 1px solid rgb(190, 190, 190);
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.inputGroup label {
+    margin-top: 15px;
+}
+
+#newProductForm button {
+    background-color: #4CAF50;
+    border: 0px solid black;
+    padding: 5px 50px;
+    font-size: 1.3rem;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.2s;
+    margin-top: 30px;
+
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+}
+
+#newProductForm button:hover {
+    /* transform: scale(1.025); */
+    background-color: #3b8a3e;
+
+}
+
+
+@media only screen and (max-width: 900px) {
+    #main h2 {
+        margin-left: 0;
+        text-align: center;
+        margin-top: 70px;
+    }
+    #newProductForm {
+        margin-left: 0;
+        width: auto;
+        
+    }
+}

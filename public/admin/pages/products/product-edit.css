@@ -1,0 +1,107 @@
+#main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#productPhoto {
+  width: 100%;
+  margin: auto;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  height: 350px;
+  object-fit: cover;
+}
+
+#editProductForm {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border: 1px solid rgb(190, 190, 190);
+  background-color: rgb(255, 255, 255);
+
+  border-radius: 25px;
+}
+
+#editProductForm label {
+  margin-top: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+}
+
+#editProductForm .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0;
+  margin-top: 45px;
+
+}
+
+#editProductForm .buttons button {
+  background-color: #4CAF50;
+  border: 0px solid black;
+  padding: 5px 50px;
+  font-size: 1.3rem;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition-duration: 0.2s;
+
+  border-bottom-left-radius: 24px;
+}
+
+#editProductForm .buttons button:hover {
+  transform: scale(1.05);
+}
+
+#editProductForm .buttons a {
+  background-color: #f44336;
+  border: 0px solid black;
+  padding: 2px 10px;
+  color: white;
+  opacity: 0.6;
+  transition-duration: 0.2s;
+
+  border-bottom-right-radius: 24px;
+}
+
+#editProductForm .buttons a:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+
+@media only screen and (max-width: 900px) {
+  #main h2 {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 70px;
+
+  }
+  #editProductForm {
+    margin-left: 0;
+    width: 95%;
+  }
+
+  #editProductForm .buttons {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  #editProductForm .buttons button {
+    padding: 5px 50px;
+    font-size: 1.3rem;
+  }
+  #editProductForm .buttons button:hover {
+    transform: scale(1);
+  }
+
+  #editProductForm .buttons a {
+    padding: 5px 10px;
+  }
+}

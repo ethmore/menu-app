@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+
+    <link rel="stylesheet" href="/admin/sidebar/sidebars.css">
+    <link rel="stylesheet" href="/admin/header/headers.css">
+    <link rel="stylesheet" href="/admin/admin.css">
+    <link rel="stylesheet" href="/admin/pages/products/products.css">
+    <script src="/admin/jquerry.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="page">
+        <div id="jsSidebar">
+        </div>
+
+        <div id="main">
+            <div id="navBar"></div>
+
+            <div id="top">
+                <h3>Tüm Ürünler</h3>
+                <a href="/admin/products/add-new">Yeni ürün ekle</a>
+            </div>
+
+            <div id="products-wrapper">
+                <ul id="products">
+                    <li class="product-item">
+                        <div id="filler1"  style="width: 100px; min-width: 100px;"></div>
+                        <div class="productInfo">
+                            <h6 class="productName">Ürün</h6>
+                            <h6 class="price">Fiyat</h6>
+                            <h6 class="content">Açıklama</h6>
+                            <h6 class="category">Kategori</h6>
+                        </div>
+                        <div id="filler2" style="width: 30px; min-width: 30px;"></div>
+                    </li>
+
+                </ul>
+
+                <!-- <div id="add-product">
+                    <a href="/admin/products/add-new">
+                        <img src="/media/add-circle-outline.svg" alt="+">
+                        <h3>Ürün Ekle</h3>
+                    </a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="/admin/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="/admin/sidebar/sidebars.js"></script>
+    <script src="/admin/pages/products/products.js"></script>
+</body>
+
+</html>

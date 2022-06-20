@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+
+  <link rel="stylesheet" href="/admin/sidebar/sidebars.css">
+  <link rel="stylesheet" href="/admin/header/headers.css">
+  <link rel="stylesheet" href="/admin/admin.css">
+  <link rel="stylesheet" href="/admin/pages/categories/category-edit.css">
+  <script src="/admin/jquerry.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="page">
+    <div id="jsSidebar">
+    </div>
+
+    <div id="main">
+      <div id="navBar"></div>
+      <h3 id="categoryNameHeader"></h3>
+
+      <div id="contentWrapper">
+        <div class="category-edit-wrapper">
+          <img src="" alt="Kategori Görsel" id="categoryMedia">
+
+          <form id='formUpdate'>
+            <div class="input-group">
+              <label class="label-padding" for="photo">Görsel Yükle: </label>
+              <input type="file" name="files" id="photo">
+            </div>
+            <div class="input-group">
+              <label class="label-padding" for="categoryName">Kategori Adı: </label>
+              <input name='category-name' type="text" id="categoryName" required>
+            </div>
+
+            <br>
+            <div id="info" style="color: red;"></div>
+
+            <div class="input-group buttons">
+              <button type='submit'>Güncelle</button>
+              <a id="deleteCategory">Kategoriyi Sil</a>
+            </div>
+          </form>
+
+        </div>
+
+        <div id="productTable">
+          <h3>Ürünler</h3>
+          <a id="newProduct" href="/admin/products/add-new">Yeni Ürün Ekle</a>
+
+          <ul id="products">
+            <li class="product-item">
+              <div id="filler1" style="width: 100px; min-width: 100px;"></div>
+              <div class="productInfo">
+                <h6 class="productName">Ürün</h6>
+                <h6 class="price">Fiyat</h6>
+                <h6 class="content">Açıklama</h6>
+                <h6 class="category">Kategori</h6>
+              </div>
+              <div id="filler2" style="width: 30px; min-width: 30px;"></div>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="/admin/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="/admin/sidebar/sidebars.js"></script>
+  <script src="/admin/pages/categories/category-edit.js"></script>
+
+  <!-- <script src="/admin/pages/categories/categories.js"></script> -->
+
+</body>
+
+</html>

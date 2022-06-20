@@ -1,0 +1,32 @@
+body {
+    background-color: #1E1E1E;
+}
+
+#mContainer {
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    -webkit-box-shadow: 0px 7px 16px 4px #000000;
+    box-shadow: 0px 7px 16px 4px #000000;
+    border-radius: 25px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form button {
+    margin-top: 30px;
+}
