@@ -1,10 +1,8 @@
 $(document).ready(function () {
-    //Get Categories
     $.post('/getCategories', function (table) {
         table = JSON.stringify(table);
         getCategories(table);
     });
-
 });
 
 function getCategories(data){
@@ -15,7 +13,6 @@ function getCategories(data){
             const category = document.createElement("a");
             const image = document.createElement("img");
             const categoryName = document.createElement("h4");
-            // const editButton = document.createElement("a");
             
             category.id = data[i]._id;
             category.className = "category-item";
@@ -26,13 +23,8 @@ function getCategories(data){
 
             categoryName.innerText = data[i].name;
 
-            // editButton.href = "/admin/categories/" + data[i]._id;
-            // editButton.innerText = "İçerik";
-
             category.appendChild(image);
             category.appendChild(categoryName);
-            // category.appendChild(editButton);
-
             document.getElementById("categories").appendChild(category);
         }
     }
@@ -45,7 +37,7 @@ function getCategories(data){
     addCategory.href = "/admin/categories/add-new";
     addCategoryImg.src = "/media/add-circle-outline.svg"
     addCategoryImg.alt = "+"
-    addCategoryText.innerText = "Kategori Ekle"
+    addCategoryText.innerText = "New Category"
 
     addCategory.appendChild(addCategoryImg);
     addCategory.appendChild(addCategoryText);

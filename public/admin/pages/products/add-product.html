@@ -16,48 +16,46 @@
 </head>
 
 <body>
-
     <div class="page">
         <div id="jsSidebar">
         </div>
-
         <div id="main">
             <div id="navBar"></div>
 
-            <h2>Ürün Oluştur</h2>
+            <h2>Create Product</h2>
             <form id='newProductForm'>
                 <div class="inputGroup">
-                    <label for='productMedia'>Ürün için görsel seçin:</label>
+                    <label for='productMedia'>Product Image:</label>
                     <input name="productMedia" id='productMedia' type="file" required>
                 </div>
                 <div class="inputGroup">
-                    <label for='productName'>Ürün Adı:</label>
-                    <input name='productName' id='productName' placeholder="Ürün adını giriniz" required />
+                    <label for='productName'>Product Name:</label>
+                    <input name='productName' id='productName' placeholder="Enter Product Name" required />
                 </div>
 
                 <div class="inputGroup">
-                    <label for='price'>Fiyat (TL):</label>
-                    <input type="number" name='price' id='price' placeholder="Fiyat bilgisi" required />
+                    <label for='price'>Price ($):</label>
+                    <input type="number" name='price' id='price' placeholder="Price Info" required />
                 </div>
 
                 <div class="inputGroup">
-                    <label for='name'>Ürün Kategorisi:</label>
+                    <label for='name'>Product Category:</label>
                     <select name="productCategory" id="productCategory" required>
-                        <option disabled selected value="disabled"> -- Kategori Seçiniz -- </option>
+                        <option disabled selected value="disabled"> -- Choose Category -- </option>
                     </select>
                 </div>
 
                 <div class="inputGroup">
-                    <label for='productContent'>İçerik Bilgisi:</label>
+                    <label for='productContent'>Content Information:</label>
                     <textarea name="productContent" id="productContent" cols="30" rows="6"
-                        placeholder="Bu alana ürün içeriği hakkında bilgi girebilirsiniz"
+                        placeholder="You can describe your product here"
                         style="resize: none;"></textarea>
                 </div>
                 
                 <br>
                 <div id="info" style="color: red;"></div>
 
-                <button type='submit'>Ürünü Kaydet</button>
+                <button type='submit'>Add Product</button>
             </form>
 
         </div>

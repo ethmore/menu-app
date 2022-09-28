@@ -16,7 +16,6 @@ function submitForm(e) {
     }).then(response => response.json())
         .then(data => {
             if (data.status === "OK") {
-                // alert(data.message)
                 document.getElementById("info").innerText = data.message
                 name.value = null
                 files.files[0] = null

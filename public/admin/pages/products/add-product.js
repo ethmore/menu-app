@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    //Get Categories
     $.post('/getCategories', function (table) {
         table = JSON.stringify(table);
         getCategories(table);
@@ -59,12 +58,3 @@ function submitForm(e) {
         })
         .catch((err) => ("Error occured", err));
 }
-/* 
-const fileInput = document.getElementById("productMedia");
-fileInput.addEventListener("change", fileFunc);
-
-function fileFunc(e){
-    e.preventDefault();
-    let fileName = fileInput.value.substring(fileInput.value.lastIndexOf('\\') + 1);
-    document.getElementById("infor").innerText = fileName
-} */

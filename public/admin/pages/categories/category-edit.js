@@ -46,7 +46,7 @@ function submitForm(e) {
                 document.getElementById("info").innerText = data.message
                 document.getElementById("categoryMedia").src = data.mediaPath
             } else {
-                document.getElementById("info").innerText = "Bir hata meydana geldi. Daha sonra tekrar deneyin"
+                document.getElementById("info").innerText = "A Problem occured. Please try again later"
             }
 
         })
@@ -57,7 +57,7 @@ let deleteConfirm = 0;
 $("#deleteCategory").click(function () {
     if (deleteConfirm === 0) {
         deleteConfirm = 1
-        document.getElementById("info").innerText = "Bu kategoriyi ve kategoriye ait tüm ürünleri silmek istediğinize emin misiniz? Onaylamak için tekrar 'Kategoriyi Sil' butonuna tıklayınız"
+        document.getElementById("info").innerText = "Are you sure to DELETE this category and ALL related products? Click again to 'DELETE' button to confirm"
     } else if (deleteConfirm === 1) {
         let url = window.location.href.split("/");
         let ID = url.length - 1
@@ -73,11 +73,11 @@ $("#deleteCategory").click(function () {
             .catch((err) => ("Error occured", err));
 
         deleteConfirm = 0
-        document.getElementById("info").innerText = ("Kategori ve kategoriye ait ürünler silindi")
+        document.getElementById("info").innerText = ("This category and all related products are deleted")
         window.location.href = '/admin/categories';
 
     } else {
-        document.getElementById("info").innerText = ("Sistemde bir arıza oluştu destek ekibi ile iletişime geçiniz")
+        document.getElementById("info").innerText = ("An error occured. Please contact with developer team")
     }
 
 });
@@ -121,7 +121,6 @@ function getProductsByCate(data) {
             content.className = "content"
 
             editButton.href = "/admin/products/" + data[i]._id;
-            // editButton.innerText = "Düzenle";
             editButton.className = "editButton";
 
             info.appendChild(productName);

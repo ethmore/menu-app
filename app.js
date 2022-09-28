@@ -78,14 +78,14 @@ app.post('/getCategory', (req, res) => {
 app.post("/newCategoryEntry", auth, async function (req, res) {
   //Media not provided
   if (!req.files || Object.keys(req.files).length === 0) {
-    res.json({ message: "HATA! Görsel dosyasını doğru seçtiğinizden emin olun!" });
+    res.json({ message: "Error! Ensure you have chosen valid image file!" });
     return
   }
 
   //Media provided but unsupported format
   fileExt = path.extname(req.files.files.name);
   if ((fileExt !== ".jpg") && (fileExt !== ".jpeg") && (fileExt !== ".png") && (fileExt !== ".svg") && (fileExt !== ".bmp")) {
-    res.json({ message: "HATA! Desteklenmeyen format! Dosyanın: jpg, jpeg, png, svg veya bmp formatlarından biri olduğuna emin olun" });
+    res.json({ message: "Error! Unsupported format! File should be one of theese formats: jpg, jpeg, png, svg veya bmp" });
     return
   }
 
@@ -108,7 +108,7 @@ app.post("/categoryUpdate", auth, async function (req, res) {
     let mediaPath = "null"
 
     db.categoryUpdate(categoryID, mediaPath, categoryName).then(function (result) {
-      res.json({ status: "OK", message: "Kategori başlığı düzenlendi!" });
+      res.json({ status: "OK", message: "Category title changed!" });
     }).catch((err) => setImmediate(() => { throw err; }));
 
     return
@@ -117,7 +117,7 @@ app.post("/categoryUpdate", auth, async function (req, res) {
   //Media provided but unsupported format
   fileExt = path.extname(req.files.files.name);
   if ((fileExt !== ".jpg") && (fileExt !== ".jpeg") && (fileExt !== ".png") && (fileExt !== ".svg") && (fileExt !== ".bmp")) {
-    res.json({ message: "HATA! Desteklenmeyen format! Dosyanın: jpg, jpeg, png, svg veya bmp formatlarından biri olduğuna emin olun" });
+    res.json({ message: "Error! Unsupported format! File should be one of theese formats: jpg, jpeg, png, svg veya bmp" });
     return
   }
 
@@ -126,7 +126,7 @@ app.post("/categoryUpdate", auth, async function (req, res) {
   let mediaPath = '/admin/upload/' + file;
 
   db.categoryUpdate(categoryID, mediaPath, categoryName).then(function (result) {
-    res.json({ status: "OK-2", message: "Kategori düzenlendi!", mediaPath: mediaPath});
+    res.json({ status: "OK-2", message: "Category changed!", mediaPath: mediaPath});
   }).catch((err) => setImmediate(() => { throw err; }));
 });
 
@@ -174,14 +174,14 @@ app.post('/getProductsByCategory', (req, res) => {
 app.post('/newProductEntry', auth, async (req, res) => {
   //Media not provided
   if (!req.files || Object.keys(req.files).length === 0) {
-    res.status(400).json({ message: "HATA! Görsel dosyasını doğru seçtiğinizden emin olun!" });
+    res.status(400).json({ message: "Error! Ensure you have chosen valid image file!" });
     return
   }
 
   //Media provided but unsupported format
   let fileExt = path.extname(req.files.files.name);
   if ((fileExt !== ".jpg") && (fileExt !== ".jpeg") && (fileExt !== ".png") && (fileExt !== ".svg") && (fileExt !== ".bmp")) {
-    res.status(400).json({ message: "HATA! Desteklenmeyen format! Dosyanın: jpg, jpeg, png, svg veya bmp formatlarından biri olduğuna emin olun" });
+    res.status(400).json({ message: "Error! Unsupported format! File should be one of theese formats: jpg, jpeg, png, svg veya bmp" });
     return
   }
 
@@ -194,7 +194,7 @@ app.post('/newProductEntry', auth, async (req, res) => {
   const productContent = req.body.productContent;
 
   db.insertProduct(productMedia, productName, productCategory, price, productContent).then(function (result) {
-    res.status(200).json({ status: "OK", message: "Ürün Başarıyla Eklendi. Ürün eklemeye devam edebilirsiniz" });
+    res.status(200).json({ status: "OK", message: "Product successfully added. You can continue" });
   }).catch((err) => setImmediate(() => { throw err; }));
 
 });
@@ -211,7 +211,7 @@ app.post("/productUpdate", auth, async function(req, res){
     let productMedia = "null";
 
     db.productUpdate(productID, productMedia, productName, category, price, content).then(function (result) {
-      res.json({ status: "OK", message: "Ürün bilgileri düzenlendi!" });
+      res.json({ status: "OK", message: "Product info updated!" });
     }).catch((err) => setImmediate(() => { throw err; }));
 
     return
@@ -220,7 +220,7 @@ app.post("/productUpdate", auth, async function(req, res){
   //Media provided but unsupported format
   fileExt = path.extname(req.files.files.name);
   if ((fileExt !== ".jpg") && (fileExt !== ".jpeg") && (fileExt !== ".png") && (fileExt !== ".svg") && (fileExt !== ".bmp")) {
-    res.json({ message: "HATA! Desteklenmeyen format! Dosyanın: jpg, jpeg, png, svg veya bmp formatlarından biri olduğuna emin olun" });
+    res.json({ message: "Error! Unsupported format! File should be one of theese formats: jpg, jpeg, png, svg veya bmp" });
     return
   }
 
@@ -229,7 +229,7 @@ app.post("/productUpdate", auth, async function(req, res){
   let productMedia = '/admin/upload/' + file;
 
   db.productUpdate(productID, productMedia, productName, category, price, content).then(function (result) {
-    res.json({ status: "OK-2", message: "Ürün bilgileri düzenlendi!", mediaPath: productMedia});
+    res.json({ status: "OK-2", message: "Product info updated!", mediaPath: productMedia});
   }).catch((err) => setImmediate(() => { throw err; }));
 });
 

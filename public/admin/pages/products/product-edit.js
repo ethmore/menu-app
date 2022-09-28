@@ -10,8 +10,6 @@ $(document).ready(function () {
             document.getElementById("productCategory").value = productData.category;
         });
     });
-
-
 });
 
 function getCategories(data) {
@@ -66,7 +64,6 @@ function submitForm(e) {
     }).then(response => response.json())
         .then(data => {
 
-            // alert(data.message)
             if (data.status === "OK") {
                 document.getElementById("info").innerText = data.message
 
@@ -75,7 +72,7 @@ function submitForm(e) {
                 document.getElementById("productPhoto").src = data.mediaPath
 
             } else {
-                document.getElementById("info").innerText = "Bir hata meydana geldi. Daha sonra tekrar deneyin"
+                document.getElementById("info").innerText = "Try again later"
             }
         })
         .catch((err) => ("Error occured", err));
@@ -86,7 +83,7 @@ let deleteConfirm = 0;
 $("#deleteProduct").click(function () {
     if (deleteConfirm === 0) {
         deleteConfirm = 1
-        document.getElementById("info").innerText = ("Bu ürünü silmek istediğinize emin misiniz? Onaylamak için tekrar 'Ürün Sil' butonuna tıklayınız")
+        document.getElementById("info").innerText = ("Click again to 'DELETE' button to delete product")
     } else if (deleteConfirm === 1) {
         let url = window.location.href.split("/");
         let ID = url.length - 1
@@ -102,11 +99,10 @@ $("#deleteProduct").click(function () {
             .catch((err) => ("Error occured", err));
 
         deleteConfirm = 0
-        document.getElementById("info").innerText = ("Ürün silindi")
-        // window.location.href = '/admin/products';
+        document.getElementById("info").innerText = ("Product Deleted")
         window.history.go(-1)
 
     } else {
-        document.getElementById("info").innerText = ("Sistemde bir arıza oluştu destek ekibi ile iletişime geçiniz")
+        document.getElementById("info").innerText = ("A problem occured. Please contact with developer team")
     }
 });

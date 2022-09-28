@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Create Category</title>
   <link rel="shortcut icon" href="#" type="image/x-icon">
 
   <link rel="stylesheet" href="/admin/sidebar/sidebars.css">
@@ -16,42 +16,37 @@
 </head>
 
 <body>
-
   <div class="page">
     <div id="jsSidebar">
     </div>
 
     <div id="main">
       <div id="navBar"></div>
-      <h2>Kategori Oluştur</h2>
+      <h2>Create Category</h2>
 
       <form id='form'>
         <div>
           <div class="input-group">
-            <label class="label-padding" for='files'>Kategori için görsel yükleyin:</label>
+            <label class="label-padding" for='files'>Category Cover Image:</label>
             <input name="files" id='files' type="file" required>
           </div>
           <div class="input-group">
-            <label class="label-padding" for='name'>Kategori Adı:</label>
-            <input name='name' id='name' placeholder="Kategori adını giriniz" required />
+            <label class="label-padding" for='name'>Category Name:</label>
+            <input name='name' id='name' placeholder="Enter Category Name" required />
           </div>
         </div>
 
         <br>
         <div id="info" style="color: red;"></div>
 
-        <button type='submit'>Kategori Oluştur</button>
+        <button type='submit'>Create</button>
       </form>
-
-
     </div>
-
   </div>
 
   <script src="/admin/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="/admin/sidebar/sidebars.js"></script>
   <script src="/admin/pages/categories/add-new-category.js"></script>
-
 </body>
 
 </html>

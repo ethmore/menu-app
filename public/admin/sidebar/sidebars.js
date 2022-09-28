@@ -56,7 +56,7 @@ function createSidebar() {
 
   const logoSpan = document.createElement("span");
   logoSpan.className = "fs-4";
-  logoSpan.innerHTML = "MaliCafe";
+  logoSpan.innerHTML = "MAC Cafe";
 
   logo.appendChild(logoImg);
   logo.appendChild(logoSpan);
@@ -88,7 +88,7 @@ function createSidebar() {
   categoryImage.className = "invert";
 
   const categorySpan = document.createElement("span");
-  categorySpan.innerText = " Kategoriler";
+  categorySpan.innerText = " Categories";
 
   categoryLink.appendChild(categoryImage)
   categoryLink.appendChild(categorySpan)
@@ -112,7 +112,7 @@ function createSidebar() {
   allProductsImage.className = "invert";
 
   const allProductsSpan = document.createElement("span");
-  allProductsSpan.innerText = " Ürünler";
+  allProductsSpan.innerText = " All Products";
 
   //User
   const sidebarBottom = document.createElement("div");
