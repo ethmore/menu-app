@@ -1,6 +1,6 @@
 menu-app
 ===
-Responsive online menu app with admin panel 
+Responsive online menu app and admin panel skeleton for restaurants 
 
 ## Installation
 
